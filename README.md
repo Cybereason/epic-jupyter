@@ -38,3 +38,17 @@ This magic is a debug helper: use it to simulate IPython's variable interpolatio
 Load this extension by calling `%loadext epic.jupyter.interpolate`.
 
 You can also load this and all future extenstions by calling `%loadext epic.jupyter`.
+
+### epic.jupyter.nbcode
+
+Use the function `use_notebook_code('path/to/source.py')` to start working with "notebook code" files.
+
+Notebook code files are python files that are loaded and then reloaded (using `exec`) whenever they change.
+
+These files should help maintaining separation of concerns. When a significant amount of relatively generic
+code is developed for the purposes of a notebook, keeping it in an adjacent file keeps the notebook itself focused
+on the research narrative. The automatic reload mechanism in turn frees the user from having to go back and run
+random code cells whenever some change is made to the underlying code.
+
+Ultimately, any useful code should make its way into a general purpose library.
+During that time when its scope is limited to a specific notebook - notebook code files are here for you.
