@@ -15,7 +15,7 @@ class TestIpython:
             assert get_ipython(strict=False) is ipython
             assert get_ipython(strict=True) is ipython
 
-    def test_no_ipython_installed(self, tmp_path):
+    def test_when_ipython_not_installed(self):
         mod = sys.modules['IPython']
         sys.modules['IPython'] = None
         for k in list(sys.modules):
