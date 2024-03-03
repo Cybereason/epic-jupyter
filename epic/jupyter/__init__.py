@@ -9,7 +9,7 @@ def load_ipython_extension(ipython):
     Load all magics in this package.
 
     Do not call this function directly.
-    Instead, use `%loadext epic.jupyter` or add it to IPython configuration.
+    Instead, use `%load_ext epic.jupyter` or add it to IPython configuration.
     """
     from .interpolate import load_ipython_extension as load_interpolate_extension
     load_interpolate_extension(ipython)
